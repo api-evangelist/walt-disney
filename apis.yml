@@ -1,17 +1,15 @@
 aid: walt-disney
-url: 
-  https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis:
   - aid: walt-disney:disney-api
     name: Disney Developer API
     tags:
+      - Content
       - Entertainment
       - Media
-      - Content
       - Parks
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.disney.com
     humanURL: https://developer.disney.com/
     properties:
