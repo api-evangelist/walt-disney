@@ -1,5 +1,6 @@
 aid: walt-disney
-url: https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis:
   - aid: walt-disney:disney-api
@@ -9,7 +10,8 @@ apis:
       - Media
       - Content
       - Parks
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.disney.com
     humanURL: https://developer.disney.com/
     properties:
@@ -18,4 +20,10 @@ apis:
       - url: openapi/walt-disney-disney-api-openapi.yml
         type: OpenAPI
     description: >-
-      Disney provides developer APIs for accessing entertainment content metadata, park information, and media services. The APIs enable partners to integrate Disney content and experiences into their applications.
+      Disney provides developer APIs for accessing entertainment content metadata,
+      park information, and media services. The APIs enable partners to integrate
+      Disney content and experiences into their applications.
+description: >-
+  The Walt Disney Company is a leading diversified international family entertainment
+  and media enterprise with operations across media networks, parks and resorts, studio
+  entertainment, and direct-to-consumer streaming.
