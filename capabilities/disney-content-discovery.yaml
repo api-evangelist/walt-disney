@@ -1,0 +1,87 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Disney Content Discovery"
+  description: >-
+    Workflow for discovering Disney characters and content metadata across
+    films, TV shows, video games, and park attractions. Enables content
+    applications, fans, and media platforms to explore Disney's character
+    universe and build engaging experiences.
+  tags:
+    - Disney
+    - Entertainment
+    - Characters
+    - Content Discovery
+    - Media
+  created: "2026-05-03"
+  modified: "2026-05-03"
+
+capability:
+  consumes:
+    - import: disney-characters
+      location: ./shared/disney-characters.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: disney-content-api
+      description: "Unified REST API for Disney character and content discovery."
+      resources:
+        - path: /v1/characters
+          name: characters
+          description: Disney character catalog
+          operations:
+            - method: GET
+              name: list-characters
+              description: List all Disney characters with pagination
+              call: "disney-characters.list-characters"
+              with:
+                page: "rest.page"
+                pageSize: "rest.pageSize"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/characters/{id}
+          name: character
+          description: Individual character details
+          operations:
+            - method: GET
+              name: get-character
+              description: Get a specific Disney character by ID
+              call: "disney-characters.get-character"
+              with:
+                id: "rest.id"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: disney-content-mcp
+      transport: http
+      description: "MCP server for AI-assisted Disney character and content exploration."
+      tools:
+        - name: list-disney-characters
+          description: List Disney characters from the complete Disney universe database
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "disney-characters.list-characters"
+          with:
+            page: "tools.page"
+            pageSize: "tools.pageSize"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-disney-character
+          description: Get full details for a specific Disney character including all films, TV shows, and park attractions
+          hints:
+            readOnly: true
+            openWorld: false
+          call: "disney-characters.get-character"
+          with:
+            id: "tools.id"
+          outputParameters:
+            - type: object
+              mapping: "$."

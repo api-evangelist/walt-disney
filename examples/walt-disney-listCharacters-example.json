@@ -1,0 +1,52 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.disneyapi.dev/character",
+    "params": {
+      "page": 1,
+      "pageSize": 10
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "info": {
+        "totalPages": 983,
+        "count": 9820,
+        "previousPage": null,
+        "nextPage": "https://api.disneyapi.dev/character?page=2&pageSize=10"
+      },
+      "data": [
+        {
+          "_id": 112,
+          "url": "https://api.disneyapi.dev/character/112",
+          "name": "Adella",
+          "sourceUrl": "https://disney.fandom.com/wiki/Adella",
+          "films": [],
+          "shortFilms": [],
+          "tvShows": ["The Little Mermaid"],
+          "videoGames": [],
+          "parkAttractions": [],
+          "allies": [],
+          "enemies": [],
+          "imageUrl": "https://static.wikia.nocookie.net/disney/images/2/25/Adella.jpg"
+        },
+        {
+          "_id": 4,
+          "url": "https://api.disneyapi.dev/character/4",
+          "name": "Merida",
+          "sourceUrl": "https://disney.fandom.com/wiki/Merida",
+          "films": ["Brave"],
+          "shortFilms": [],
+          "tvShows": ["Sofia the First"],
+          "videoGames": ["Brave: The Video Game", "Disney INFINITY"],
+          "parkAttractions": ["Fairytale Forest", "Fantasy Festival Street"],
+          "allies": ["Angus", "The Wisps"],
+          "enemies": ["Mor'du"],
+          "alignment": "Good",
+          "imageUrl": "https://static.wikia.nocookie.net/disney/images/9/91/Merida.jpg"
+        }
+      ]
+    }
+  }
+}

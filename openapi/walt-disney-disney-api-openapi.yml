@@ -1,50 +1,190 @@
 openapi: 3.1.0
 info:
-  title: Disney Developer API
+  title: Disney Characters API
   description: >-
-    Disney provides developer APIs for accessing entertainment content metadata, park information, and media services. The APIs enable partners to integrate Disney content and experiences into their applications.
-  version: '1.0'
+    The Disney Characters API provides REST and GraphQL interfaces to a
+    comprehensive database of Disney characters across films, TV shows,
+    video games, and park attractions. The API covers 9,820+ Disney characters
+    from all Disney brands including Walt Disney Animation, Pixar, Marvel, Star
+    Wars, and National Geographic. No authentication is required for read access.
+  version: '1.0.0'
   contact:
-    name: Walt Disney Developer Support
-    url: https://developer.disney.com/
+    name: Disney API
+    url: https://disneyapi.dev/
+  license:
+    name: MIT
+    url: https://github.com/ManuCastrillonM/disney-api/blob/main/LICENSE
 externalDocs:
-  description: Documentation
-  url: https://developer.disney.com/
+  description: Disney API Documentation
+  url: https://disneyapi.dev/docs/
 servers:
-  - url: https://api.disney.com
-    description: Production
+  - url: https://api.disneyapi.dev
+    description: Disney Characters API Production
 tags:
-  - name: Entertainment
-    description: Entertainment operations
-security:
-  - bearerAuth: []
+  - name: Characters
+    description: Disney character data including films, TV shows, and park attractions
 paths:
-  /status:
+  /character:
     get:
-      operationId: getStatus
-      summary: Get API status
+      operationId: listCharacters
+      summary: List All Characters
       description: >-
-        Returns the current status of the API.
+        Retrieve a paginated list of all Disney characters. Each character
+        includes associated films, short films, TV shows, video games, park
+        attractions, and character alignment.
       tags:
-        - Entertainment
+        - Characters
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+          description: Page number for pagination
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 50
+            minimum: 1
+            maximum: 200
+          description: Number of characters per page
       responses:
         '200':
-          description: Success
+          description: Paginated list of Disney characters
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                  version:
-                    type: string
-        '401':
-          description: Unauthorized
+                $ref: '#/components/schemas/CharacterListResponse'
+        '400':
+          description: Invalid request parameters
+        '429':
+          description: Too many requests - rate limit exceeded
+  /character/{id}:
+    get:
+      operationId: getCharacterById
+      summary: Get Character by ID
+      description: >-
+        Retrieve a specific Disney character by their unique identifier.
+        Returns full character details including all associated media properties.
+      tags:
+        - Characters
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: Unique identifier of the Disney character
+      responses:
+        '200':
+          description: Disney character details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CharacterResponse'
+        '404':
+          description: Character not found
         '429':
           description: Too many requests
 components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
+  schemas:
+    Character:
+      type: object
+      description: A Disney character with all associated media appearances
+      properties:
+        _id:
+          type: integer
+          description: Unique character identifier
+        url:
+          type: string
+          format: uri
+          description: URL to the character's detail page
+        name:
+          type: string
+          description: Character name
+        sourceUrl:
+          type: string
+          format: uri
+          description: Source URL for character data
+        films:
+          type: array
+          items:
+            type: string
+          description: List of Disney films featuring this character
+        shortFilms:
+          type: array
+          items:
+            type: string
+          description: List of Disney short films featuring this character
+        tvShows:
+          type: array
+          items:
+            type: string
+          description: List of TV shows featuring this character
+        videoGames:
+          type: array
+          items:
+            type: string
+          description: List of video games featuring this character
+        parkAttractions:
+          type: array
+          items:
+            type: string
+          description: List of Disney park attractions featuring this character
+        allies:
+          type: array
+          items:
+            type: string
+          description: List of allied characters
+        enemies:
+          type: array
+          items:
+            type: string
+          description: List of enemy characters
+        alignment:
+          type: string
+          description: Character alignment (Hero, Villain, etc.)
+        imageUrl:
+          type: string
+          format: uri
+          description: URL to the character's image
+      required:
+        - _id
+        - name
+    PaginationInfo:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          description: Total number of pages available
+        count:
+          type: integer
+          description: Total number of characters matching the query
+        previousPage:
+          type: string
+          nullable: true
+          description: URL for the previous page of results
+        nextPage:
+          type: string
+          nullable: true
+          description: URL for the next page of results
+    CharacterListResponse:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/PaginationInfo'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Character'
+    CharacterResponse:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/PaginationInfo'
+        data:
+          $ref: '#/components/schemas/Character'

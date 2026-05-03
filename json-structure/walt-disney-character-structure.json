@@ -1,0 +1,20 @@
+{
+  "title": "Disney Character Structure",
+  "description": "Documentation of the data structure for Disney character objects.",
+  "type": "object",
+  "fields": [
+    { "name": "_id", "type": "integer", "description": "Unique character identifier", "required": true },
+    { "name": "url", "type": "string", "description": "API URL to character details" },
+    { "name": "name", "type": "string", "description": "Character name", "required": true },
+    { "name": "sourceUrl", "type": "string", "description": "Disney wiki source URL" },
+    { "name": "films", "type": "array", "itemType": "string", "description": "Disney feature films" },
+    { "name": "shortFilms", "type": "array", "itemType": "string", "description": "Disney short films" },
+    { "name": "tvShows", "type": "array", "itemType": "string", "description": "Television shows" },
+    { "name": "videoGames", "type": "array", "itemType": "string", "description": "Video games" },
+    { "name": "parkAttractions", "type": "array", "itemType": "string", "description": "Disney park attractions" },
+    { "name": "allies", "type": "array", "itemType": "string", "description": "Allied characters" },
+    { "name": "enemies", "type": "array", "itemType": "string", "description": "Enemy characters" },
+    { "name": "alignment", "type": "string", "description": "Good, Evil, Neutral, or Anti-Hero" },
+    { "name": "imageUrl", "type": "string", "description": "Character image URL" }
+  ]
+}

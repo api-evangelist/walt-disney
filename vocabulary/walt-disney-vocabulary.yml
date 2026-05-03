@@ -1,0 +1,119 @@
+vocabulary:
+  name: Walt Disney API Vocabulary
+  description: >-
+    Core vocabulary for Disney character data, media properties, and content
+    categories across the Disney brand universe including Walt Disney Animation,
+    Pixar, Marvel, Star Wars, and park attractions.
+  version: "1.0.0"
+  created: "2026-05-03"
+  modified: "2026-05-03"
+
+terms:
+  # Character Alignment
+  - term: Good
+    label: Good
+    category: Character Alignment
+    description: Character aligned with heroic, positive values (heroes, protagonists, sidekicks).
+
+  - term: Evil
+    label: Evil
+    category: Character Alignment
+    description: Character aligned with villainous goals (antagonists, villains).
+
+  - term: Neutral
+    label: Neutral
+    category: Character Alignment
+    description: Character with no strong moral alignment.
+
+  - term: Anti-Hero
+    label: Anti-Hero
+    category: Character Alignment
+    description: Character who exhibits heroic goals but through morally questionable means.
+
+  # Media Categories
+  - term: films
+    label: Feature Films
+    category: Media Type
+    description: Disney theatrical feature films including Walt Disney Animation, Pixar, and live-action.
+
+  - term: shortFilms
+    label: Short Films
+    category: Media Type
+    description: Disney animated and live-action short films.
+
+  - term: tvShows
+    label: Television Shows
+    category: Media Type
+    description: Disney Channel, Disney+, and ABC television series.
+
+  - term: videoGames
+    label: Video Games
+    category: Media Type
+    description: Video games featuring Disney characters across all platforms.
+
+  - term: parkAttractions
+    label: Park Attractions
+    category: Media Type
+    description: Attractions, rides, and character meet-and-greet locations at Disney theme parks.
+
+  # Disney Brands
+  - term: Walt Disney Animation
+    label: Walt Disney Animation Studios
+    category: Disney Brand
+    description: The flagship Walt Disney Animation Studios producing animated feature films.
+
+  - term: Pixar
+    label: Pixar Animation Studios
+    category: Disney Brand
+    description: Pixar Animation Studios, known for computer-animated feature films.
+
+  - term: Marvel
+    label: Marvel Studios
+    category: Disney Brand
+    description: Marvel Studios producing superhero films and TV series.
+
+  - term: Star Wars
+    label: Star Wars / Lucasfilm
+    category: Disney Brand
+    description: Lucasfilm franchise including the Star Wars and Indiana Jones universes.
+
+  - term: National Geographic
+    label: National Geographic
+    category: Disney Brand
+    description: National Geographic brand for documentary and educational content.
+
+  # API Concepts
+  - term: page
+    label: Page Number
+    category: Pagination
+    description: Current page number in paginated character results (1-indexed).
+
+  - term: pageSize
+    label: Page Size
+    category: Pagination
+    description: Number of characters returned per page (default 50, maximum 200).
+
+  - term: totalPages
+    label: Total Pages
+    category: Pagination
+    description: Total number of pages available in the full character result set.
+
+  - term: nextPage
+    label: Next Page URL
+    category: Pagination
+    description: Full URL for fetching the next page of results (null if on last page).
+
+  - term: previousPage
+    label: Previous Page URL
+    category: Pagination
+    description: Full URL for fetching the previous page of results (null if on first page).
+
+categories:
+  - name: Character Alignment
+    description: Moral and narrative alignment classifications for Disney characters
+  - name: Media Type
+    description: Types of Disney media content where characters appear
+  - name: Disney Brand
+    description: Major Disney studio brands and franchises
+  - name: Pagination
+    description: API pagination parameters and response fields

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/api-evangelist/walt-disney/blob/main/json-schema/walt-disney-character-schema.json",
+  "title": "Disney Character",
+  "description": "Schema for a Disney character from the Disney Characters API.",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "integer",
+      "description": "Unique character identifier"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "API URL for the character's detail endpoint"
+    },
+    "name": {
+      "type": "string",
+      "description": "Character name"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Source URL (Disney wiki) for character information"
+    },
+    "films": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Disney feature films in which the character appears"
+    },
+    "shortFilms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Disney short films in which the character appears"
+    },
+    "tvShows": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Television shows in which the character appears"
+    },
+    "videoGames": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Video games featuring the character"
+    },
+    "parkAttractions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Disney park attractions featuring the character"
+    },
+    "allies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Allied characters"
+    },
+    "enemies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Enemy characters"
+    },
+    "alignment": {
+      "type": "string",
+      "description": "Character alignment (e.g., Good, Evil, Neutral)",
+      "enum": ["Good", "Evil", "Neutral", "Anti-Hero"]
+    },
+    "imageUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the character's image"
+    }
+  },
+  "required": ["_id", "name"]
+}

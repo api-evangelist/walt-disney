@@ -1,0 +1,83 @@
+extends: spectral:oas
+rules:
+  disney-operation-ids-required:
+    description: All operations must have an operationId
+    severity: error
+    given: "$.paths[*][*]"
+    then:
+      field: operationId
+      function: truthy
+
+  disney-operation-summary-title-case:
+    description: Operation summaries must use Title Case
+    severity: warn
+    given: "$.paths[*][*].summary"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z0-9]*(\\s[A-Z][a-zA-Z0-9]*)*$"
+
+  disney-operation-tags-required:
+    description: All operations must have at least one tag
+    severity: error
+    given: "$.paths[*][*]"
+    then:
+      field: tags
+      function: truthy
+
+  disney-pagination-parameters:
+    description: List endpoints should support page and pageSize parameters
+    severity: warn
+    given: "$.paths[*].get.parameters"
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: array
+          contains:
+            type: object
+            properties:
+              name:
+                enum:
+                  - page
+                  - pageSize
+
+  disney-info-description:
+    description: Info object must have a description
+    severity: error
+    given: "$.info"
+    then:
+      field: description
+      function: truthy
+
+  disney-response-200-defined:
+    description: GET operations must define a 200 response
+    severity: error
+    given: "$.paths[*].get.responses"
+    then:
+      field: "200"
+      function: truthy
+
+  disney-response-schema-reference:
+    description: Successful responses should reference a schema
+    severity: warn
+    given: "$.paths[*][*].responses['200'].content['application/json']"
+    then:
+      field: schema
+      function: truthy
+
+  disney-schemas-in-components:
+    description: Schemas should be defined in components for reuse
+    severity: warn
+    given: "$.components"
+    then:
+      field: schemas
+      function: truthy
+
+  disney-server-defined:
+    description: At least one server must be defined
+    severity: error
+    given: "$"
+    then:
+      field: servers
+      function: truthy
