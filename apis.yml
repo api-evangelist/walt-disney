@@ -75,6 +75,9 @@ common:
   - url: https://medium.com/disney-streaming
     name: Disney Streaming Engineering Blog
     type: Blog
+  - url: https://medium.com/feed/disney-streaming
+    type: BlogRSS
+    description: Discovered RSS/Atom feed for https://medium.com/disney-streaming
   - url: https://developer.disney.com/
     name: Disney Developer Portal
     type: Portal
