@@ -1,0 +1,364 @@
+{
+  "item": [
+    {
+      "id": "7a814f3d-d81a-4c47-a83e-9c84f2df3d27",
+      "name": "Characters",
+      "description": {
+        "content": "Disney character data including films, TV shows, and park attractions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "501fb030-df7c-4e05-8cb3-3c56dc62fac3",
+          "name": "List All Characters",
+          "request": {
+            "name": "List All Characters",
+            "description": {
+              "content": "Retrieve a paginated list of all Disney characters. Each character includes associated films, short films, TV shows, video games, park attractions, and character alignment.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "character"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "50",
+                  "description": "Number of characters per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23bd0a2c-e682-4d61-a897-eb26f3b1195b",
+              "name": "Paginated list of Disney characters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"info\": {\n    \"totalPages\": 8461,\n    \"count\": 8330,\n    \"previousPage\": \"string\",\n    \"nextPage\": \"string\"\n  },\n  \"data\": [\n    {\n      \"_id\": 5412,\n      \"name\": \"string\",\n      \"url\": \"http://CoHIxPUkwXamMdrsfqT.iwD3cp.AWZsaTVsUK7O1rhMzXcMnlIG7PGaxT\",\n      \"sourceUrl\": \"http://yavtZqtUcJeakvlgtymmkzKkruFIHr.svnCTKH\",\n      \"films\": [\n        \"string\",\n        \"string\"\n      ],\n      \"shortFilms\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tvShows\": [\n        \"string\",\n        \"string\"\n      ],\n      \"videoGames\": [\n        \"string\",\n        \"string\"\n      ],\n      \"parkAttractions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"allies\": [\n        \"string\",\n        \"string\"\n      ],\n      \"enemies\": [\n        \"string\",\n        \"string\"\n      ],\n      \"alignment\": \"string\",\n      \"imageUrl\": \"https://RYtnXOSvgoAUmuuhkesCdeCvmCoqBCm.sgmCfpTdYz0qswT3JKc5vbRd\"\n    },\n    {\n      \"_id\": 4134,\n      \"name\": \"string\",\n      \"url\": \"https://XjkNmCKFtYlrTkoOFcwepNWnulyjg.zdyogKMR2ghxCGyLHoziMtqn3MkhFIaVgToWvCXMwCbNyec4udlblx0qOpxdwJ\",\n      \"sourceUrl\": \"http://SNKjhvdVmsofFEeJNjdPljqAUlnNwd.kfvydnIYokfEq1XfomjeL9H1H-AIYBsWFx,v+iKxCFWlkFxtbyWtQqUWj-kJ7CmiVS\",\n      \"films\": [\n        \"string\",\n        \"string\"\n      ],\n      \"shortFilms\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tvShows\": [\n        \"string\",\n        \"string\"\n      ],\n      \"videoGames\": [\n        \"string\",\n        \"string\"\n      ],\n      \"parkAttractions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"allies\": [\n        \"string\",\n        \"string\"\n      ],\n      \"enemies\": [\n        \"string\",\n        \"string\"\n      ],\n      \"alignment\": \"string\",\n      \"imageUrl\": \"http://RQvdoEcilKRVKJTRrGMtrFZsRD.siKIE+4EFZUJbiSaINE7+0gH5cPd2n287\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1cac4e8-d760-4f89-9862-1b129b03270d",
+              "name": "Invalid request parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c3186d9b-1fe5-4362-95dd-61f90dc2710e",
+              "name": "Too many requests - rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d526993c-635e-4427-99ff-4f0c17ade322",
+          "name": "Get Character by ID",
+          "request": {
+            "name": "Get Character by ID",
+            "description": {
+              "content": "Retrieve a specific Disney character by their unique identifier. Returns full character details including all associated media properties.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "character",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Unique identifier of the Disney character"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f92188ae-a1e3-4065-8d71-5743d88b2e00",
+              "name": "Disney character details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Unique identifier of the Disney character"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"info\": {\n    \"totalPages\": 5304,\n    \"count\": 259,\n    \"previousPage\": \"string\",\n    \"nextPage\": \"string\"\n  },\n  \"data\": {\n    \"_id\": 4075,\n    \"name\": \"string\",\n    \"url\": \"https://uzTOlrUxZGzyFmsmCuXSQVbbwarf.gsbzSzYeuD8OIXQKvtXsJ2MuZLuzQ.JW7tff,4afIs9Ty\",\n    \"sourceUrl\": \"http://gPAdvteciXctgKYPTLDDeJjI.ncmlS+j,+GWuYgI+ZYMpNgrfHKzPS0gIPmlDXVDRCVfxataquB4X9bqv4\",\n    \"films\": [\n      \"string\",\n      \"string\"\n    ],\n    \"shortFilms\": [\n      \"string\",\n      \"string\"\n    ],\n    \"tvShows\": [\n      \"string\",\n      \"string\"\n    ],\n    \"videoGames\": [\n      \"string\",\n      \"string\"\n    ],\n    \"parkAttractions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"allies\": [\n      \"string\",\n      \"string\"\n    ],\n    \"enemies\": [\n      \"string\",\n      \"string\"\n    ],\n    \"alignment\": \"string\",\n    \"imageUrl\": \"https://TjKruRyftYyTbaZuQmPIpqB.zkuiyww3EgMR1AGaVXqjeVGBQ5Qt6+hrM9qp9mp2NjHH9vytVy2DueP\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a87d75f7-12ce-48e2-a6f2-1958e29f6282",
+              "name": "Character not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Unique identifier of the Disney character"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "845f4704-ef49-446c-831c-eed6e928ddf8",
+              "name": "Too many requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "character",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Unique identifier of the Disney character"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.disneyapi.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7caf0596-3d9a-4cea-b016-c0d11c07d77d",
+    "name": "Disney Characters API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Disney Characters API provides REST and GraphQL interfaces to a comprehensive database of Disney characters across films, TV shows, video games, and park attractions. The API covers 9,820+ Disney characters from all Disney brands including Walt Disney Animation, Pixar, Marvel, Star Wars, and National Geographic. No authentication is required for read access.\n\nContact Support:\n Name: Disney API",
+      "type": "text/plain"
+    }
+  }
+}

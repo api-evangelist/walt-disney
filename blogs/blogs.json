@@ -2,17 +2,17 @@
   "repo": "walt-disney",
   "feeds": [
     {
-      "source": "https://medium.com/disney-streaming",
-      "error": "HTTPError"
-    },
-    {
       "source": "https://medium.com/feed/disney-streaming",
       "feed_url": "https://medium.com/feed/disney-streaming",
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://medium.com/disney-streaming",
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-06-01T23:35:02Z",
+  "fetched": "2026-06-14T20:42:17Z",
   "post_count": 0
 }

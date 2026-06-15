@@ -1,89 +1,71 @@
-# Walt Disney
+# Walt Disney (walt-disney)
 
-The Walt Disney Company is a leading diversified international family entertainment and media enterprise. The Disney Characters API provides a free, open-access database of 9,820+ characters across all Disney brands. Disney also maintains extensive open source projects through its engineering teams.
+The Walt Disney Company is a leading diversified international family entertainment and media enterprise with operations across media networks, parks and resorts, studio entertainment, and direct-to-consumer streaming. Disney's developer APIs and open source projects enable partners and developers to integrate Disney content, characters, and experiences into their applications.
 
-- **Website:** [https://www.disney.com/](https://www.disney.com/)
-- **Developer Portal:** [https://developer.disney.com/](https://developer.disney.com/)
-- **Characters API:** [https://disneyapi.dev/](https://disneyapi.dev/)
-- **Open Source:** [https://disney.github.io/](https://disney.github.io/)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Entertainment
+- Media
+- Streaming
+- Parks
+- Content
+
+## Timestamps
+
+- **Created:** 2026-03-21
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Disney Characters API
 
-Free REST and GraphQL API providing access to 9,820+ Disney characters with associated films, TV shows, video games, and park attraction data.
+The Disney Characters API provides REST and GraphQL interfaces to a comprehensive database of 9,820+ Disney characters across all Disney brands including Walt Disney Animation, Pixar, Marvel, Star Wars, and National Geographic. Each character includes associated films, short films, TV shows, video games, park attractions, and character relationships. The API requires no authentication and is freely accessible.
 
+- **Human URL:** [https://disneyapi.dev/](https://disneyapi.dev/)
 - **Base URL:** `https://api.disneyapi.dev`
-- **Authentication:** None required
-- **Documentation:** [https://disneyapi.dev/docs/](https://disneyapi.dev/docs/)
 
-## Artifacts
+#### Tags
 
-### OpenAPI Specifications
+- Characters
+- Content
+- Entertainment
+- Films
+- Parks
+- Television
 
-| Spec | Description |
-|------|-------------|
-| [walt-disney-disney-api-openapi.yml](openapi/walt-disney-disney-api-openapi.yml) | Disney Characters API — list and retrieve characters |
+#### Properties
 
-### Spectral Rules
+- [Documentation](https://disneyapi.dev/docs/)
+- [OpenAPI](openapi/walt-disney-disney-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/walt-disney-disney-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/walt-disney-disney-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Spectral Rules](rules/walt-disney-rules.yml)
+- [JSON Schema](json-schema/walt-disney-character-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [J S O N L D Context](json-ld/walt-disney-context.jsonld)
+- [Vocabulary](vocabulary/walt-disney-vocabulary.yml)
 
-| Ruleset | Description |
-|---------|-------------|
-| [walt-disney-rules.yml](rules/walt-disney-rules.yml) | Spectral ruleset for Disney API conventions |
+## Common Properties
 
-### Naftiko Capabilities
-
-#### Shared Per-API Definitions
-
-| File | Description |
-|------|-------------|
-| [capabilities/shared/disney-characters.yaml](capabilities/shared/disney-characters.yaml) | Disney Characters API definition |
-
-#### Workflow Capabilities
-
-| Workflow | Description | Tools |
-|----------|-------------|-------|
-| [disney-content-discovery.yaml](capabilities/disney-content-discovery.yaml) | Character and content discovery | 2 tools |
-
-### JSON Schemas
-
-| Schema | Description |
-|--------|-------------|
-| [walt-disney-character-schema.json](json-schema/walt-disney-character-schema.json) | Disney character data schema |
-
-### JSON Structures
-
-| Structure | Description |
-|-----------|-------------|
-| [walt-disney-character-structure.json](json-structure/walt-disney-character-structure.json) | Character data structure documentation |
-
-### JSON-LD Contexts
-
-| Context | Description |
-|---------|-------------|
-| [walt-disney-context.jsonld](json-ld/walt-disney-context.jsonld) | JSON-LD context (schema.org aligned) |
-
-### Examples
-
-| Example | Description |
-|---------|-------------|
-| [walt-disney-listCharacters-example.json](examples/walt-disney-listCharacters-example.json) | List characters request/response example |
-
-### Vocabulary
-
-| File | Description |
-|------|-------------|
-| [walt-disney-vocabulary.yml](vocabulary/walt-disney-vocabulary.yml) | Disney content and character vocabulary |
-
-## Open Source Projects
-
-- [Quanta](https://github.com/disney/quanta) — Roaring bitmap-based HTAP database engine
-- [MaterialX](https://github.com/materialx/MaterialX) — Open standard for material content interchange
-- [USD (Universal Scene Description)](https://github.com/PixarAnimationStudios/USD) — 3D scene interchange
-- [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv) — Subdivision surface evaluation
-- [Automated Cloud Advisor](https://github.com/disneystreaming/automated-cloud-advisor) — AWS cost optimization
-- [weaver-test](https://github.com/disneystreaming/weaver-test) — Scala test framework
+- [LinkedIn](https://www.linkedin.com/company/the-walt-disney-company)
+- [Website](https://www.disney.com/)
+- [Portal](https://disneyapi.dev/)
+- [Documentation](https://disneyapi.dev/docs/)
+- [GitHub Organization](https://disney.github.io/)
+- [GitHub Organization](https://github.com/disney)
+- [GitHub Organization](https://github.com/disneystreaming)
+- [Blog](https://medium.com/disney-streaming)
+- [Blog R S S](https://medium.com/feed/disney-streaming)
+- [Portal](https://developer.disney.com/)
 
 ## Maintainers
 
-**Kin Lane** — [kin@apievangelist.com](mailto:kin@apievangelist.com)
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
