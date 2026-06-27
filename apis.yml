@@ -5,11 +5,11 @@ created: '2026-03-21'
 name: Walt Disney
 tags:
   - Fortune 100
-- Entertainment
-- Media
-- Streaming
-- Parks
-- Content
+  - Entertainment
+  - Media
+  - Streaming
+  - Parks
+  - Content
 type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party

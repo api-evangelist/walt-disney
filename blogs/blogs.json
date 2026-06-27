@@ -10,9 +10,12 @@
     },
     {
       "source": "https://medium.com/disney-streaming",
-      "error": "HTTPError"
+      "feed_url": "https://medium.com/feed/disney-streaming",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "fetched": "2026-06-14T20:42:17Z",
+  "fetched": "2026-06-27T12:03:07Z",
   "post_count": 0
 }
