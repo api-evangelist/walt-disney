@@ -1,0 +1,37 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.disney.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 21 07:22:05 2026 GMT
+  hsts: null
+- host: disneyapi.dev
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 20 11:24:51 2026 GMT
+  hsts: false
+- host: developer.disney.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 21 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: disney.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
+- domain: disneyapi.dev
+  dnssec: true
+  caa:
+  - manucastrillonm.github.io.
+  - 0 issue "letsencrypt.org"
+  - 0 issue "sectigo.com"
+  - 0 issuewild "digicert.com"
+  - 0 issuewild "letsencrypt.org"
+  - 0 issuewild "sectigo.com"
+  spf: true
+  dmarc: false

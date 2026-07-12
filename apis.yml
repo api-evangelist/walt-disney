@@ -53,6 +53,8 @@ apis:
     Geographic. Each character includes associated films, short films, TV shows, video games, park attractions, and
     character relationships. The API requires no authentication and is freely accessible.
 common:
+- type: DomainSecurity
+  url: security/walt-disney-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/the-walt-disney-company
 - url: https://www.disney.com/
