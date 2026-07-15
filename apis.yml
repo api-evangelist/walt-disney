@@ -53,6 +53,8 @@ apis:
     Geographic. Each character includes associated films, short films, TV shows, video games, park attractions, and
     character relationships. The API requires no authentication and is freely accessible.
 common:
+- type: AgenticAccess
+  url: agentic-access/walt-disney-agentic-access.yml
 - type: DomainSecurity
   url: security/walt-disney-domain-security.yml
 - type: LinkedIn
