@@ -1,5 +1,17 @@
 aid: walt-disney
 url: https://raw.githubusercontent.com/api-evangelist/walt-disney/refs/heads/main/apis.yml
+accessModel:
+  pricing: enterprise
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 modified: '2026-05-19'
 created: '2026-03-21'
 name: Walt Disney
@@ -11,7 +23,7 @@ tags:
   - Parks
   - Content
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/walt-disney.png
 access: 3rd-Party
 position: Consumer
 description: >-
@@ -20,38 +32,28 @@ description: >-
   developer APIs and open source projects enable partners and developers to integrate Disney content, characters, and
   experiences into their applications.
 apis:
-- aid: walt-disney:disney-characters-api
-  name: Disney Characters API
+- aid: walt-disney:walt-disney-characters-api
+  name: Walt Disney Characters API
+  description: Disney character data including films, TV shows, and park attractions
+  humanURL: https://disneyapi.dev/
+  baseURL: https://api.disneyapi.dev
   tags:
   - Characters
-  - Content
-  - Entertainment
-  - Films
-  - Parks
-  - Television
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  baseURL: https://api.disneyapi.dev
-  humanURL: https://disneyapi.dev/
   properties:
-  - url: https://disneyapi.dev/docs/
-    type: Documentation
-  - url: openapi/walt-disney-disney-api-openapi.yml
-    type: OpenAPI
-  - url: rules/walt-disney-rules.yml
-    type: SpectralRules
-  - url: json-schema/walt-disney-character-schema.json
-    type: JSONSchema
-  - url: json-ld/walt-disney-context.jsonld
-    type: JSONLDContext
-  - url: vocabulary/walt-disney-vocabulary.yml
-    type: Vocabulary
-  - url: graphql/walt-disney-graphql.md
-    type: GraphQL
-  description: >-
-    The Disney Characters API provides REST and GraphQL interfaces to a comprehensive database of 9,820+ Disney
-    characters across all Disney brands including Walt Disney Animation, Pixar, Marvel, Star Wars, and National
-    Geographic. Each character includes associated films, short films, TV shows, video games, park attractions, and
-    character relationships. The API requires no authentication and is freely accessible.
+  - type: OpenAPI
+    url: openapi/walt-disney-characters-api-openapi.yml
+  - type: Documentation
+    url: https://disneyapi.dev/docs/
+  - type: SpectralRules
+    url: rules/walt-disney-rules.yml
+  - type: JSONSchema
+    url: json-schema/walt-disney-character-schema.json
+  - type: JSONLDContext
+    url: json-ld/walt-disney-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/walt-disney-vocabulary.yml
+  - type: GraphQL
+    url: graphql/walt-disney-graphql.md
 common:
 - type: AgenticAccess
   url: agentic-access/walt-disney-agentic-access.yml
