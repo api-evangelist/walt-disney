@@ -1,0 +1,14 @@
+{
+  "provider": "walt-disney",
+  "sources": [
+    "walt-disney-characters-api-openapi.yml"
+  ],
+  "outputs": [
+    "walt-disney-characters-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
