@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Disney Characters API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Characters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List All Characters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.disneyapi.dev/character",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "Number of characters per page"
+              }
+            ]
+          },
+          "docs": "Retrieve a paginated list of all Disney characters. Each character includes associated films, short films, TV shows, video games, park attractions, and character alignment."
+        },
+        {
+          "info": {
+            "name": "Get Character by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.disneyapi.dev/character/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier of the Disney character"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific Disney character by their unique identifier. Returns full character details including all associated media properties."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
