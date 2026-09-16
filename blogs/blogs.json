@@ -3,10 +3,7 @@
   "feeds": [
     {
       "source": "https://medium.com/disney-streaming",
-      "feed_url": "https://medium.com/feed/disney-streaming",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
+      "error": "HTTPError"
     },
     {
       "source": "https://medium.com/feed/disney-streaming",
@@ -16,7 +13,7 @@
       "method": "feed"
     }
   ],
-  "fetched": "2026-09-06T19:17:18Z",
+  "fetched": "2026-09-13T13:00:00Z",
   "post_count": 10,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
