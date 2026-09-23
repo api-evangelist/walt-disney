@@ -1,7 +1,9 @@
 ---
 title: The Walt Disney Company and OpenAI reach landmark ...
 url: https://openai.com/index/disney-sora-agreement/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Walt Disney" press release artificial intelligence'
 position: 2
 source: serpapi-google

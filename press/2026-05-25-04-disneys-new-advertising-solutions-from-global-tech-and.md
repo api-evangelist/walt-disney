@@ -1,7 +1,9 @@
 ---
 title: Disney's New Advertising Solutions from Global Tech & ...
 url: https://thewaltdisneycompany.com/news/tech-data-showcase-advertising-2026/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Walt Disney" press release artificial intelligence'
 position: 4
 source: serpapi-google

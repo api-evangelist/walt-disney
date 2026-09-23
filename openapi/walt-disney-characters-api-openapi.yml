@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Disney Characters API
   description: The Disney Characters API provides REST and GraphQL interfaces to a comprehensive database of Disney characters across films, TV shows, video games, and park attractions. The API covers 9,820+ Disney characters from all Disney brands including Walt Disney Animation, Pixar, Marvel, Star Wars, and National Geographic. No authentication is required for read access.
@@ -79,6 +79,13 @@ paths:
           description: Too many requests
 components:
   schemas:
+    CharacterResponse:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/PaginationInfo'
+        data:
+          $ref: '#/components/schemas/Character'
     PaginationInfo:
       type: object
       properties:
@@ -96,22 +103,6 @@ components:
           type: string
           nullable: true
           description: URL for the next page of results
-    CharacterResponse:
-      type: object
-      properties:
-        info:
-          $ref: '#/components/schemas/PaginationInfo'
-        data:
-          $ref: '#/components/schemas/Character'
-    CharacterListResponse:
-      type: object
-      properties:
-        info:
-          $ref: '#/components/schemas/PaginationInfo'
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Character'
     Character:
       type: object
       description: A Disney character with all associated media appearances
@@ -175,6 +166,15 @@ components:
       required:
       - _id
       - name
+    CharacterListResponse:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/PaginationInfo'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Character'
 externalDocs:
   description: Disney API Documentation
   url: https://disneyapi.dev/docs/

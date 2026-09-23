@@ -1,7 +1,9 @@
 ---
 title: Disney has officially opened the floodgates on AI ...
 url: https://www.facebook.com/comicbookdotcom/posts/disney-has-officially-opened-the-floodgates-on-ai-as-reports-are-now-in-that-the/1264375688889438/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Walt Disney" press release artificial intelligence'
 position: 3
 source: serpapi-google
