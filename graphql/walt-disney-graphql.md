@@ -1,1 +1,0 @@
-# Walt Disney GraphQL API

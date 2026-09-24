@@ -63,8 +63,6 @@ apis:
     url: json-ld/walt-disney-context.jsonld
   - type: Vocabulary
     url: vocabulary/walt-disney-vocabulary.yml
-  - type: GraphQL
-    url: graphql/walt-disney-graphql.md
 common:
 - type: AgenticAccess
   url: agentic-access/walt-disney-agentic-access.yml
