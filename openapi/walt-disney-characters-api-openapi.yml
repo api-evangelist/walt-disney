@@ -142,13 +142,6 @@ components:
       required:
       - _id
       - name
-    CharacterResponse:
-      type: object
-      properties:
-        info:
-          $ref: '#/components/schemas/PaginationInfo'
-        data:
-          $ref: '#/components/schemas/Character'
     CharacterListResponse:
       type: object
       properties:
@@ -158,6 +151,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Character'
+    CharacterResponse:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/PaginationInfo'
+        data:
+          $ref: '#/components/schemas/Character'
     PaginationInfo:
       type: object
       properties:
