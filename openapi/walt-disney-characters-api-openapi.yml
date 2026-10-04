@@ -79,6 +79,23 @@ paths:
           description: Too many requests
 components:
   schemas:
+    PaginationInfo:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          description: Total number of pages available
+        count:
+          type: integer
+          description: Total number of characters matching the query
+        previousPage:
+          type: string
+          nullable: true
+          description: URL for the previous page of results
+        nextPage:
+          type: string
+          nullable: true
+          description: URL for the next page of results
     Character:
       type: object
       description: A Disney character with all associated media appearances
@@ -158,23 +175,6 @@ components:
           $ref: '#/components/schemas/PaginationInfo'
         data:
           $ref: '#/components/schemas/Character'
-    PaginationInfo:
-      type: object
-      properties:
-        totalPages:
-          type: integer
-          description: Total number of pages available
-        count:
-          type: integer
-          description: Total number of characters matching the query
-        previousPage:
-          type: string
-          nullable: true
-          description: URL for the previous page of results
-        nextPage:
-          type: string
-          nullable: true
-          description: URL for the next page of results
 externalDocs:
   description: Disney API Documentation
   url: https://disneyapi.dev/docs/
